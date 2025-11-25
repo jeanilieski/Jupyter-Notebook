@@ -1,0 +1,29 @@
+import pypyodbc as odbc  # pip install pypyodbc
+import pandas as pd
+#import yes
+
+driver_name = 'sql server'
+server_name = 'Winner\SQLEXPRESS'
+database_name = 'ContosoRetailDW'
+
+
+# connection_sting = odbc.connect(driver_name, server_name, database_name)
+connection_sting =  f"""
+driver = {{{driver_name}}};
+server = {server_name};
+database = {database_name};
+USER = 'root'
+password = '7...xYY'
+Trust_Connection = yes;
+            """
+
+conn =   odbc.connect(connection_sting)
+cursor = conn.cursor()
+
+query = """ select max([CustomerKey]) from [ContosoRetailDW].[dbo].[V_Customer]
+"""
+
+
+ #  conn.close()
+ #  cursor.close()
+ #  print(conn)
