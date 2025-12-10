@@ -7,7 +7,7 @@ import sys
 import csv
 
 #servername-localhost, user, password, db name(e.g., db:bank and table:account)
-db=sql.connect('localhost','root','7b48i49x','banc')
+db=sql.connect('localhost','root','7...x','banc')
 
 
 dbQuery='SELECT * FROM employee_banc;'
@@ -24,3 +24,4 @@ fp = open('temp.csv', 'wb')
 myFile = csv.writer(fp)
 myFile.writerows(rows)
 fp.close()
+
