@@ -8,7 +8,7 @@ book = xlrd.open_workbook("Employee_banc2.xlsx") #it was Employee_banc1 first
 sheet = book.sheet_by_name("Sheet1")
 
 # Establish a MySQL connection
-database = MySQLdb.connect (host="localhost", user = "root", passwd = "7b48i49x", db = "banc")
+database = MySQLdb.connect (host="localhost", user = "root", passwd = "7...x", db = "banc")
 
 # Get the cursor, which is used to traverse the database, line by line
 cursor = database.cursor()
@@ -54,3 +54,4 @@ rows = str(sheet.nrows)
 print "I just imported " + columns + " columns and " + rows + " rows to MySQL!"
 
 #check in db 'select * from employee_banc'
+
